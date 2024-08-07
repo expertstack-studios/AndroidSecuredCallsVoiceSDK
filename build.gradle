@@ -1,10 +1,16 @@
 plugins {
+    id 'com.android.library'
     id 'maven-publish'
+}
+
+android {
+    // Android configuration...
+    // Make sure to configure it as needed for your project
 }
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        mavenJava(MavenPublication)  {
             groupId = 'com.es.sc.voice'
             artifactId = 'sc_voice-debug'
             version = '1.0.0'
@@ -15,12 +21,7 @@ publishing {
     }
     repositories {
         maven {
-            name = 'GitHubPackages'
-            url = uri('https://maven.pkg.github.com/expertstack-studios/AndroidSecuredCallsVoiceSDK')
-            credentials {
-                username = project.findProperty('gpr.user') ?: System.getenv('GPR_USER')
-                password = project.findProperty('gpr.token') ?: System.getenv('GPR_TOKEN')
-            }
+            url = uri('https://jitpack.io')
         }
     }
 }
