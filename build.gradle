@@ -4,13 +4,20 @@ plugins {
 }
 
 android {
-    // Android configuration...
-    // Make sure to configure it as needed for your project
+    // Configure your library module
+    compileSdkVersion 33 // Use the appropriate SDK version
+
+    defaultConfig {
+        minSdkVersion 21 // Use the minimum SDK version
+        targetSdkVersion 33 // Use the target SDK version
+    }
+
+    // Other configurations
 }
 
 publishing {
     publications {
-        mavenJava(MavenPublication)  {
+        mavenJava(MavenPublication) {
             groupId = 'com.es.sc.voice'
             artifactId = 'sc_voice-debug'
             version = '1.0.0'
