@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/POM/4.0.0">
     <modelVersion>1.0.0</modelVersion>
     <groupId>com.es.sc.voice</groupId>
-    <artifactId>AndroidSecuredCallsVoiceSDK</artifactId>
+    <artifactId>sc_voice-debug/artifactId>
     <version>1.0.0</version>
     <packaging>aar</packaging>
 </project>
