@@ -9,8 +9,38 @@ publishing {
             artifactId = 'sc_voice-debug'
             version = '1.0.0'
 
-            // Point to your AAR file
+            // Path to your AAR file
             artifact(file('sc_voice-debug.aar'))
+
+            pom {
+                name = 'SC Voice Debug'
+                description = 'A debug version of the SC Voice library'
+                url = 'https://github.com/expertstack-studios/AndroidSecuredCallsVoiceSDK'
+
+                licenses {
+                    license {
+                        name = 'Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.html'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'expertstack'
+                        name = 'ExpertStack Team'
+                        email = 'contact@expertstack.com'
+                    }
+                }
+
+                scm {
+                    url = 'https://github.com/expertstack-studios/AndroidSecuredCallsVoiceSDK'
+                }
+
+                // Declare dependencies
+                dependencies {
+                    implementation 'com.google.code.gson:gson:2.11.0' 
+                }
+            }
         }
     }
     repositories {
@@ -24,3 +54,4 @@ publishing {
         }
     }
 }
+
