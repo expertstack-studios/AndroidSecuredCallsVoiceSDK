@@ -1,19 +1,7 @@
 plugins {
-    id 'com.android.library'
     id 'maven-publish'
 }
 
-android {
-    // Configure your library module
-    compileSdkVersion 33 // Use the appropriate SDK version
-
-    defaultConfig {
-        minSdkVersion 21 // Use the minimum SDK version
-        targetSdkVersion 33 // Use the target SDK version
-    }
-
-    // Other configurations
-}
 
 publishing {
     publications {
