@@ -6,12 +6,12 @@ plugins {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId = 'com.es.sc.voice'
-            artifactId = 'sc_voice-debug'
+            groupId = 'com.example.sc_sdk'
+            artifactId = 'sc_sdk-debug'
             version = '1.0.0'
 
             // Point to your AAR file
-            artifact(file('sc_voice-debug.aar'))
+            artifact(file('sc_sdk-debug.aar'))
         }
     }
     repositories {
