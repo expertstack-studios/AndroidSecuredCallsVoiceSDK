@@ -1,22 +1,26 @@
 plugins {
     id 'maven-publish'
 }
-
-
+ 
 publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId = 'com.example.sc_sdk'
             artifactId = 'sc_sdk-debug'
             version = '1.0.0'
-
+ 
             // Point to your AAR file
             artifact(file('sc_sdk-debug.aar'))
         }
     }
     repositories {
         maven {
-            url = uri('https://jitpack.io')
+            name = 'GitHubPackages'
+            url = uri('https://maven.pkg.github.com/expertstack-studios/AndroidSecuredCallsVoiceSDK')
+            credentials {
+                username = project.findProperty('gpr.user') ?: System.getenv('GPR_USER')
+                password = project.findProperty('gpr.token') ?: System.getenv('GPR_TOKEN')
+            }
         }
     }
 }
